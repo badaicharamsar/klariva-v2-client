@@ -657,6 +657,22 @@ textarea {
   background: #0d1323;
 }
 
+.process-hero-visual {
+  aspect-ratio: 971 / 1619;
+  max-width: 410px;
+  justify-self: end;
+  width: 100%;
+  background: #0d1323;
+}
+
+.contact-hero-visual {
+  aspect-ratio: 1;
+  max-width: 500px;
+  justify-self: end;
+  width: 100%;
+  background: #0d1323;
+}
+
 .hero-visual-home::before {
   content: "";
   position: absolute;
@@ -717,6 +733,22 @@ textarea {
   filter: brightness(0.72) saturate(0.9) contrast(1.04);
 }
 
+.process-hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
 .coord,
 .corner-label {
   position: absolute;
@@ -756,9 +788,11 @@ textarea {
 
 .hero-visual img,
 .hero-visual svg,
+.visual-frame img,
 .visual-frame svg,
 .art-block svg,
 .service-visual svg,
+.mini-visual img,
 .mini-visual svg {
   width: 100%;
   height: 100%;
@@ -850,6 +884,36 @@ textarea {
 
 .insight-visual {
   aspect-ratio: 4 / 3;
+  background: #101725;
+}
+
+.insight-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(8, 11, 20, 0.14), rgba(8, 11, 20, 0.32)),
+    radial-gradient(circle at 50% 50%, rgba(212, 175, 111, 0.06), transparent 34%);
+}
+
+.insight-visual::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: 1;
+  pointer-events: none;
+  border: 1px solid rgba(232, 228, 220, 0.08);
+}
+
+.insight-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.82) saturate(0.94) contrast(1.03);
 }
 
 .insight-title {
@@ -940,6 +1004,15 @@ textarea {
   border-bottom: 1px solid var(--line);
   overflow: hidden;
   background: linear-gradient(135deg, var(--midnight-2), var(--graphite));
+}
+
+.service-preview-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.84) saturate(0.94) contrast(1.03);
 }
 
 .art-block-label {
@@ -1289,6 +1362,24 @@ textarea {
   background: linear-gradient(135deg, var(--midnight-2), var(--midnight));
 }
 
+.service-visual-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.84) saturate(0.94) contrast(1.03);
+}
+
+.service-visual .personal-service-image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  object-position: 50% 46%;
+  transform: none;
+}
+
 .service-visual-label,
 .service-visual-ref {
   position: absolute;
@@ -1475,8 +1566,8 @@ textarea {
 
 .mini-visual {
   width: 100%;
-  max-width: 320px;
-  aspect-ratio: 1;
+  max-width: 430px;
+  aspect-ratio: 1448 / 1086;
   border: 1px solid var(--line);
   background: linear-gradient(135deg, var(--graphite), var(--midnight-2));
   overflow: hidden;

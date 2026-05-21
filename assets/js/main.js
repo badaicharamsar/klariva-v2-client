@@ -44,7 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
             ogDescription: "Layanan investigasi dan verifikasi fakta yang legal, rahasia, objektif, dan profesional."
           },
           attr: {
-            ".hero-home-image": { alt: "Visual investigatif mata dengan elemen biometrik statis" }
+            ".hero-home-image": { alt: "Visual investigatif mata dengan elemen biometrik statis" },
+            ".insight-image": { alt: "Visual metodologi investigasi dengan dokumen dan parameter analisis" },
+            ".personal-service-image": { alt: "Visual investigasi personal dengan fokus observasi dan dokumen" },
+            ".corporate-service-image": { alt: "Visual investigasi korporat dengan struktur bisnis dan titik analisis" },
+            ".digital-service-image": { alt: "Visual verifikasi fakta digital dengan dokumen dan fokus analisis" },
+            ".legal-boundary-image": { alt: "Visual batas operasional dengan simbol larangan dan perimeter pengawasan" }
           },
           text: {
             ".hero-actions .btn span": "Konsultasi",
@@ -235,6 +240,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ogTitle: "Klariva - Proses",
             ogDescription: "Alur kerja Klariva dari konsultasi awal hingga laporan akhir yang aman, tertib, dan berbasis fakta."
           },
+          attr: {
+            ".process-hero-image": { alt: "Visual alur proses dengan tahapan terstruktur dan jalur review" }
+          },
           text: {
             ".page-hero .eyebrow": "Alur Operasional / KLV-PRC-01",
             ".corner-label": ["PROCESS / FLOW", "CONTROLLED", "CHAIN OF REVIEW", "KLV / DELIVERY"],
@@ -270,6 +278,9 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "Halaman kontak awal Klariva untuk konsultasi rahasia. Form masih berupa placeholder dan belum terhubung ke backend.",
             ogTitle: "Klariva - Kontak",
             ogDescription: "Hubungi Klariva untuk konsultasi awal yang rahasia."
+          },
+          attr: {
+            ".contact-hero-image": { alt: "Visual konsultasi awal rahasia dengan fokus intake dan komunikasi aman" }
           },
           text: {
             ".page-hero .eyebrow": "Intake Aman / KLV-CNT-01",
@@ -345,7 +356,12 @@ document.addEventListener("DOMContentLoaded", () => {
             ogDescription: "Investigation and fact verification services that are lawful, confidential, objective, and professional."
           },
           attr: {
-            ".hero-home-image": { alt: "Investigative eye visual with static biometric elements" }
+            ".hero-home-image": { alt: "Investigative eye visual with static biometric elements" },
+            ".insight-image": { alt: "Investigation methodology visual with documents and analysis parameters" },
+            ".personal-service-image": { alt: "Personal investigation visual focused on observation and document review" },
+            ".corporate-service-image": { alt: "Corporate investigation visual with business structures and analysis focal points" },
+            ".digital-service-image": { alt: "Digital fact verification visual with documents and analytical focus" },
+            ".legal-boundary-image": { alt: "Operational boundary visual with a prohibition symbol and monitoring perimeter" }
           },
           text: {
             ".hero-actions .btn span": "Consultation",
@@ -536,6 +552,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ogTitle: "Klariva - Process",
             ogDescription: "Klariva's working process from initial consultation to secure final reporting."
           },
+          attr: {
+            ".process-hero-image": { alt: "Process flow visual with structured stages and a review path" }
+          },
           text: {
             ".page-hero .eyebrow": "Operational Flow / KLV-PRC-01",
             ".corner-label": ["PROCESS / FLOW", "CONTROLLED", "CHAIN OF REVIEW", "KLV / DELIVERY"],
@@ -571,6 +590,9 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "Klariva's initial contact page for confidential consultation. The form is still a placeholder and is not yet connected to a backend.",
             ogTitle: "Klariva - Contact",
             ogDescription: "Contact Klariva for a confidential initial consultation."
+          },
+          attr: {
+            ".contact-hero-image": { alt: "Confidential initial consultation visual focused on intake and secure communication" }
           },
           text: {
             ".page-hero .eyebrow": "Secure Intake / KLV-CNT-01",
