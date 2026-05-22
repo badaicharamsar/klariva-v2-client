@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klariva - Kontak</title>
-  <meta name="description" content="Halaman kontak awal Klariva untuk konsultasi rahasia. Form masih berupa placeholder dan belum terhubung ke backend.">
+  <meta name="description" content="Hubungi Klariva untuk konsultasi awal yang rahasia. Pilih kanal komunikasi yang paling nyaman — WhatsApp, Email, Instagram, Threads, atau TikTok.">
   <meta property="og:title" content="Klariva - Kontak">
-  <meta property="og:description" content="Hubungi Klariva untuk initial consultation yang rahasia.">
+  <meta property="og:description" content="Hubungi Klariva untuk konsultasi awal yang rahasia melalui kanal pilihan Anda.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="/contact.html">
   <link rel="icon" type="image/png" href="assets/icons/logo-klariva-icon.png">
@@ -58,7 +58,7 @@
               <span class="corner-label tl">CONTACT / INTAKE</span>
               <span class="corner-label tr">PRIVATE</span>
               <span class="corner-label bl">INITIAL SCREENING</span>
-              <span class="corner-label br">KOL / SECURE</span>
+              <span class="corner-label br">KLV / SECURE</span>
               <img
                 src="assets/icons/Hubungi_Kontak_Klariva.png"
                 alt="Visual konsultasi awal rahasia dengan fokus intake dan komunikasi aman"
@@ -71,50 +71,166 @@
         </div>
       </header>
 
-      <section class="section-pad">
+      <section class="section-pad" id="contact-form">
         <div class="container">
+
+          <!-- Selected services banner -->
+          <div class="selected-service-banner" id="selectedServiceBanner" hidden>
+            <div class="ssb-inner">
+              <div class="ssb-left">
+                <span class="ssb-label">Layanan Dipilih</span>
+                <div class="ssb-service-list" id="serviceBadgeList"></div>
+              </div>
+              <button type="button" class="ssb-clear" id="serviceBadgeClear" aria-label="Hapus semua pilihan layanan">
+                <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <path d="M13 3L3 13M3 3l10 10"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
           <div class="contact-grid">
+
+            <!-- Left: Info card -->
             <div class="contact-card">
               <h3>Konsultasi Awal</h3>
-              <p>Gunakan halaman ini untuk menyiapkan alur konsultasi awal yang rahasia. Detail kanal komunikasi final masih dapat disesuaikan setelah sistem operasional dan backend siap digunakan.</p>
+              <p>Pilih kanal komunikasi yang paling nyaman untuk Anda. Diskusi awal bersifat rahasia — tidak ada komitmen sebelum lingkup penugasan disepakati bersama.</p>
               <ul class="contact-points">
                 <li>Intake respons awal yang rahasia</li>
                 <li>Penyaringan awal kebutuhan kasus</li>
                 <li>Konfirmasi lingkup operasional</li>
                 <li>Komunikasi aman berdasarkan pengaturan</li>
               </ul>
-              <div style="margin-top: 24px;">
-                <a href="#contact-form" class="btn"><span>Mulai Kasus</span></a>
-              </div>
             </div>
 
-            <div class="form-shell" id="contact-form">
-              <h3>Placeholder Formulir Kontak</h3>
-              <p>Form berikut belum terhubung ke backend. Struktur field sudah disiapkan agar mudah dihubungkan ke sistem form handling atau API pada tahap berikutnya.</p>
-              <form data-dummy-form>
-                <div class="form-grid">
-                  <div class="form-group">
-                    <label for="name">Nama</label>
-                    <input id="name" name="name" type="text" placeholder="Nama Anda">
+            <!-- Right: Channel selector -->
+            <div class="channel-shell" id="channel-shell">
+              <div class="channel-intro">
+                <div class="section-label channel-section-label">Pilih Kanal</div>
+                <h3 class="channel-heading">Hubungi melalui kanal yang <em>paling nyaman</em></h3>
+              </div>
+
+              <div class="channel-grid">
+
+                <!-- WhatsApp -->
+                <button class="channel-card" type="button" data-channel="whatsapp">
+                  <div class="channel-card-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                    </svg>
                   </div>
-                  <div class="form-group">
-                    <label for="contact-channel">Email / WhatsApp</label>
-                    <input id="contact-channel" name="contact-channel" type="text" placeholder="email@contoh.com / +62">
+                  <div class="channel-card-info">
+                    <div class="channel-card-name">WhatsApp</div>
+                    <div class="channel-card-desc">Pesan langsung terkirim otomatis</div>
                   </div>
-                  <div class="form-group full">
-                    <label for="subject">Subjek</label>
-                    <input id="subject" name="subject" type="text" placeholder="Ringkasan kebutuhan">
+                  <div class="channel-card-badge">Auto</div>
+                </button>
+
+                <!-- Email -->
+                <button class="channel-card" type="button" data-channel="email">
+                  <div class="channel-card-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="2" y="4" width="20" height="16" rx="2"/>
+                      <path d="M2 7l10 7 10-7"/>
+                    </svg>
                   </div>
-                  <div class="form-group full">
-                    <label for="message">Pesan</label>
-                    <textarea id="message" name="message" placeholder="Jelaskan konteks secara singkat dan aman."></textarea>
+                  <div class="channel-card-info">
+                    <div class="channel-card-name">Email</div>
+                    <div class="channel-card-desc">Salin pesan, compose via Gmail</div>
                   </div>
+                  <div class="channel-card-badge channel-card-badge--copy">Salin</div>
+                </button>
+
+                <!-- Instagram -->
+                <button class="channel-card" type="button" data-channel="instagram">
+                  <div class="channel-card-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                      <rect x="2" y="2" width="20" height="20" rx="5"/>
+                      <circle cx="12" cy="12" r="5"/>
+                      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+                    </svg>
+                  </div>
+                  <div class="channel-card-info">
+                    <div class="channel-card-name">Instagram</div>
+                    <div class="channel-card-desc">Salin pesan, buka profil Instagram</div>
+                  </div>
+                  <div class="channel-card-badge channel-card-badge--copy">Salin</div>
+                </button>
+
+                <!-- Threads -->
+                <button class="channel-card" type="button" data-channel="threads">
+                  <div class="channel-card-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="4"/>
+                      <path d="M16 12a6 6 0 1 0-1.4 3.9"/>
+                      <path d="M16 12v4"/>
+                    </svg>
+                  </div>
+                  <div class="channel-card-info">
+                    <div class="channel-card-name">Threads</div>
+                    <div class="channel-card-desc">Salin pesan, buka profil</div>
+                  </div>
+                  <div class="channel-card-badge channel-card-badge--copy">Salin</div>
+                </button>
+
+                <!-- TikTok -->
+                <button class="channel-card" type="button" data-channel="tiktok">
+                  <div class="channel-card-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                    </svg>
+                  </div>
+                  <div class="channel-card-info">
+                    <div class="channel-card-name">TikTok</div>
+                    <div class="channel-card-desc">Salin pesan, buka profil</div>
+                  </div>
+                  <div class="channel-card-badge channel-card-badge--copy">Salin</div>
+                </button>
+
+                <!-- X (Twitter) -->
+                <button class="channel-card" type="button" data-channel="twitter">
+                  <div class="channel-card-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                      <path d="M4 4l16 16M20 4L4 20"/>
+                    </svg>
+                  </div>
+                  <div class="channel-card-info">
+                    <div class="channel-card-name">X (Twitter)</div>
+                    <div class="channel-card-desc">Salin pesan, buka profil</div>
+                  </div>
+                  <div class="channel-card-badge channel-card-badge--copy">Salin</div>
+                </button>
+
+              </div>
+
+              <!-- Message Panel (shown after channel is selected) -->
+              <div class="message-panel" id="messagePanel" hidden>
+                <div class="message-panel-header">
+                  <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 10a1 1 0 0 1-1 1H5l-3 3V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7z"/>
+                  </svg>
+                  <span class="message-panel-label">Pesan untuk <span id="channelNameDisplay" class="message-channel-name"></span></span>
                 </div>
-                <div style="margin-top: 22px;">
-                  <button type="submit" class="btn"><span>Kirim Placeholder</span></button>
+                <div class="message-box">
+                  <p id="messageText"></p>
                 </div>
-                <p class="form-note" data-form-status>Catatan: form belum terhubung ke sistem backend.</p>
-              </form>
+                <div class="message-actions">
+                  <button type="button" class="btn btn-copy-msg" id="copyMessageBtn">
+                    <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="5" y="5" width="9" height="9" rx="1"/>
+                      <path d="M10 5V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/>
+                    </svg>
+                    <span>Salin Pesan</span>
+                  </button>
+                  <a href="#" class="btn channel-action-btn" id="channelActionBtn" target="_blank" rel="noopener noreferrer">
+                    <span id="channelActionText">Buka Kanal</span>
+                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M3 13L13 3M8 3h5v5"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -123,9 +239,9 @@
       <section class="cta-section">
         <div class="container">
           <div class="cta-meta">Intake Rahasia</div>
-          <h2 class="cta-title">Konsultasi awal dimulai dari ringkasan yang <em>aman dan jelas</em>.</h2>
-          <p class="cta-sub">Saat backend sudah tersedia, halaman ini dapat langsung dihubungkan ke email handler, form service, atau endpoint internal tanpa perlu mengubah struktur visual.</p>
-          <a href="#contact-form" class="btn btn-lg"><span>Ke Formulir</span></a>
+          <h2 class="cta-title">Semua kanal direspons dengan <em>kerahasiaan penuh.</em></h2>
+          <p class="cta-sub">Konsultasi awal tidak memerlukan komitmen. Lingkup penugasan baru disepakati setelah penilaian awal selesai.</p>
+          <a href="#contact-form" class="btn btn-lg"><span>Pilih Kanal</span></a>
         </div>
       </section>
     </main>
@@ -152,31 +268,52 @@
           </div>
 
           <div class="footer-col">
-            <h4>Placeholder</h4>
+            <h4>Layanan</h4>
             <ul>
-              <li><a href="services.html#personal-investigation">Confidential Investigation</a></li>
-              <li><a href="services.html#digital-verification">Fact Verification</a></li>
-              <li><a href="services.html#legal-boundary">Legal &amp; Ethical Boundary</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="services.html#personal-investigation">Investigasi Personal</a></li>
+              <li><a href="services.html#corporate-investigation">Investigasi Korporat</a></li>
+              <li><a href="services.html#digital-verification">Verifikasi Digital</a></li>
+              <li><a href="services.html#legal-boundary">Batas Legal &amp; Etika</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
-            <h4>Contact</h4>
-            <p>Initial consultation by appointment only.</p>
-            <p>Secure communication available on request.</p>
-            <p>Indonesia based operations.</p>
+            <h4>Kontak</h4>
+            <p>Konsultasi awal hanya melalui janji terlebih dahulu.</p>
+            <p>Kanal komunikasi aman tersedia berdasarkan permintaan.</p>
+            <p>Operasional berbasis di Indonesia.</p>
+            <div class="footer-social">
+              <a href="https://wa.me/628127688109" class="footer-social-link" data-contact-link="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/nusantarabadai" class="footer-social-link" data-contact-link="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.threads.net/@nusantarabadai" class="footer-social-link" data-contact-link="threads" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 12a6 6 0 1 0-1.4 3.9"/><path d="M16 12v4"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@badainusantara9" class="footer-social-link" data-contact-link="tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              </a>
+              <a href="https://x.com/klarivaIV" class="footer-social-link" data-contact-link="twitter" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg>
+              </a>
+              <a href="mailto:badaicharamsar@gmail.com" class="footer-social-link" data-contact-link="email" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+              </a>
+            </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2026 Klariva. All rights reserved.</p>
-          <p><span class="code">KLV-CNT-01 / FORM PLACEHOLDER ONLY</span></p>
+          <p>&copy; 2026 Klariva. Seluruh hak cipta dilindungi.</p>
+          <p><span class="code">KLV-CNT-01 / KANAL KONSULTASI AKTIF</span></p>
         </div>
       </div>
     </footer>
   </div>
 
+  <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

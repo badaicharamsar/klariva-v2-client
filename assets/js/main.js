@@ -275,48 +275,45 @@ document.addEventListener("DOMContentLoaded", () => {
         "contact.html": {
           meta: {
             title: "Klariva - Kontak",
-            description: "Halaman kontak awal Klariva untuk konsultasi rahasia. Form masih berupa placeholder dan belum terhubung ke backend.",
+            description: "Hubungi Klariva untuk konsultasi awal yang rahasia. Pilih kanal komunikasi yang paling nyaman — WhatsApp, Email, Instagram, Threads, atau TikTok.",
             ogTitle: "Klariva - Kontak",
-            ogDescription: "Hubungi Klariva untuk konsultasi awal yang rahasia."
+            ogDescription: "Hubungi Klariva untuk konsultasi awal yang rahasia melalui kanal pilihan Anda."
           },
           attr: {
             ".contact-hero-image": { alt: "Visual konsultasi awal rahasia dengan fokus intake dan komunikasi aman" }
           },
           text: {
             ".page-hero .eyebrow": "Intake Aman / KLV-CNT-01",
-            ".corner-label": ["CONTACT / INTAKE", "PRIVATE", "INITIAL SCREENING", "KOL / SECURE"],
+            ".corner-label": ["CONTACT / INTAKE", "PRIVATE", "INITIAL SCREENING", "KLV / SECURE"],
             ".contact-card h3": "Konsultasi Awal",
-            ".contact-card > p": "Gunakan halaman ini untuk menyiapkan alur konsultasi awal yang rahasia. Detail kanal komunikasi final masih dapat disesuaikan setelah sistem operasional dan backend siap digunakan.",
+            ".contact-card > p": "Pilih kanal komunikasi yang paling nyaman untuk Anda. Diskusi awal bersifat rahasia — tidak ada komitmen sebelum lingkup penugasan disepakati bersama.",
             ".contact-points li": [
               "Intake respons awal yang rahasia",
               "Penyaringan awal kebutuhan kasus",
               "Konfirmasi lingkup operasional",
               "Komunikasi aman berdasarkan pengaturan"
             ],
-            ".contact-card .btn span": "Mulai Kasus",
-            ".form-shell h3": "Placeholder Formulir Kontak",
-            ".form-shell > p": "Form berikut belum terhubung ke backend. Struktur field sudah disiapkan agar mudah dihubungkan ke sistem form handling atau API pada tahap berikutnya.",
-            "label[for='name']": "Nama",
-            "label[for='contact-channel']": "Email / WhatsApp",
-            "label[for='subject']": "Subjek",
-            "label[for='message']": "Pesan",
-            ".form-shell button span": "Kirim Placeholder",
-            ".form-note": "Catatan: form belum terhubung ke sistem backend.",
+            ".channel-section-label": "Pilih Kanal",
+            ".channel-card-desc": [
+              "Pesan langsung terkirim otomatis",
+              "Salin pesan, compose via Gmail",
+              "Salin pesan, buka profil Instagram",
+              "Salin pesan, buka profil",
+              "Salin pesan, buka profil",
+              "Salin pesan, buka profil X"
+            ],
+            ".channel-card-badge": ["Auto", "Salin", "Salin", "Salin", "Salin", "Salin"],
+            ".ssb-label": "Layanan Dipilih",
             ".cta-section .cta-meta": "Intake Rahasia",
-            ".cta-section .cta-sub": "Saat backend sudah tersedia, halaman ini dapat langsung dihubungkan ke email handler, form service, atau endpoint internal tanpa perlu mengubah struktur visual.",
-            ".cta-section .btn span": "Ke Formulir",
-            ".footer-bottom .code": "KLV-CNT-01 / FORMULIR MASIH PLACEHOLDER"
+            ".cta-section .cta-sub": "Konsultasi awal tidak memerlukan komitmen. Lingkup penugasan baru disepakati setelah penilaian awal selesai.",
+            ".cta-section .btn span": "Pilih Kanal",
+            ".footer-bottom .code": "KLV-CNT-01 / KANAL KONSULTASI AKTIF"
           },
           html: {
             ".page-hero-title": "Hubungi<br><em>Klariva</em>",
             ".page-hero-sub": "Konsultasi awal dilakukan secara rahasia untuk memahami kebutuhan dan menentukan apakah kasus dapat ditangani dalam batas legal serta etis.",
-            ".cta-section .cta-title": "Konsultasi awal dimulai dari ringkasan yang <em>aman dan jelas</em>."
-          },
-          placeholder: {
-            "#name": "Nama Anda",
-            "#contact-channel": "email@contoh.com / +62",
-            "#subject": "Ringkasan kebutuhan",
-            "#message": "Jelaskan konteks secara singkat dan aman."
+            ".channel-heading": "Hubungi melalui kanal yang <em>paling nyaman</em>",
+            ".cta-section .cta-title": "Semua kanal direspons dengan <em>kerahasiaan penuh.</em>"
           }
         }
       }
@@ -587,48 +584,45 @@ document.addEventListener("DOMContentLoaded", () => {
         "contact.html": {
           meta: {
             title: "Klariva - Contact",
-            description: "Klariva's initial contact page for confidential consultation. The form is still a placeholder and is not yet connected to a backend.",
+            description: "Contact Klariva for a confidential initial consultation. Choose your preferred communication channel — WhatsApp, Email, Instagram, Threads, or TikTok.",
             ogTitle: "Klariva - Contact",
-            ogDescription: "Contact Klariva for a confidential initial consultation."
+            ogDescription: "Contact Klariva for a confidential initial consultation through your preferred channel."
           },
           attr: {
             ".contact-hero-image": { alt: "Confidential initial consultation visual focused on intake and secure communication" }
           },
           text: {
             ".page-hero .eyebrow": "Secure Intake / KLV-CNT-01",
-            ".corner-label": ["CONTACT / INTAKE", "PRIVATE", "INITIAL SCREENING", "KOL / SECURE"],
+            ".corner-label": ["CONTACT / INTAKE", "PRIVATE", "INITIAL SCREENING", "KLV / SECURE"],
             ".contact-card h3": "Initial Consultation",
-            ".contact-card > p": "Use this page to prepare a confidential initial consultation flow. Final communication channels can still be adjusted once the operational system and backend are ready.",
+            ".contact-card > p": "Choose the communication channel most comfortable for you. The initial discussion is confidential — no commitment is required before the assignment scope is mutually agreed.",
             ".contact-points li": [
               "Confidential first-response intake",
               "Preliminary case screening",
               "Operational scope confirmation",
               "Secure communication by arrangement"
             ],
-            ".contact-card .btn span": "Start Case",
-            ".form-shell h3": "Contact Form Placeholder",
-            ".form-shell > p": "The form below is not connected to a backend yet. The field structure is already prepared so it can be connected easily to a form handling system or API later.",
-            "label[for='name']": "Name",
-            "label[for='contact-channel']": "Email / WhatsApp",
-            "label[for='subject']": "Subject",
-            "label[for='message']": "Message",
-            ".form-shell button span": "Submit Placeholder",
-            ".form-note": "Note: the form is not connected to a backend yet.",
+            ".channel-section-label": "Choose Channel",
+            ".channel-card-desc": [
+              "Message sent automatically",
+              "Copy message, compose via Gmail",
+              "Copy message, open Instagram profile",
+              "Copy message, open profile",
+              "Copy message, open profile",
+              "Copy message, open X profile"
+            ],
+            ".channel-card-badge": ["Auto", "Copy", "Copy", "Copy", "Copy", "Copy"],
+            ".ssb-label": "Selected Service",
             ".cta-section .cta-meta": "Confidential Intake",
-            ".cta-section .cta-sub": "Once the backend is available, this page can be connected directly to an email handler, form service, or internal endpoint without changing the visual structure.",
-            ".cta-section .btn span": "Go To Form",
-            ".footer-bottom .code": "KLV-CNT-01 / FORM PLACEHOLDER ONLY"
+            ".cta-section .cta-sub": "The initial consultation requires no commitment. The assignment scope is only agreed upon after the initial assessment.",
+            ".cta-section .btn span": "Choose Channel",
+            ".footer-bottom .code": "KLV-CNT-01 / CONSULTATION CHANNELS ACTIVE"
           },
           html: {
             ".page-hero-title": "Contact<br><em>Klariva</em>",
             ".page-hero-sub": "The initial consultation is handled confidentially to understand the need and determine whether the case can be handled within lawful and ethical boundaries.",
-            ".cta-section .cta-title": "Initial consultation begins with a summary that is <em>safe and clear</em>."
-          },
-          placeholder: {
-            "#name": "Your Name",
-            "#contact-channel": "email@example.com / +62",
-            "#subject": "Brief summary of your needs",
-            "#message": "Describe the context briefly and safely."
+            ".channel-heading": "Contact us through your <em>most comfortable channel</em>",
+            ".cta-section .cta-title": "All channels handled with <em>full confidentiality.</em>"
           }
         }
       }
@@ -789,16 +783,315 @@ document.addEventListener("DOMContentLoaded", () => {
 
   applyLanguage(currentLanguage);
 
-  const dummyForm = document.querySelector("[data-dummy-form]");
-  const formStatus = document.querySelector("[data-form-status]");
+  // ===== SERVICE SELECTION (services.html) =====
+  function initServiceSelection() {
+    const subItems = document.querySelectorAll(".sub-list li[data-service-code]");
+    if (!subItems.length) return;
 
-  if (dummyForm && formStatus) {
-    dummyForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      formStatus.textContent =
-        currentLanguage === "en"
-          ? "This form is still a placeholder and has not been connected to a backend system yet."
-          : "Form ini masih berupa placeholder dan belum terhubung ke sistem backend.";
+    const selectionBar = document.getElementById("selectionBar");
+    if (!selectionBar) return;
+
+    const countBadge = document.getElementById("selectionCount");
+    const labelEl = document.getElementById("selectionLabel");
+    const chipsEl = document.getElementById("selectionChips");
+    const clearBtn = document.getElementById("selectionClear");
+    const ctaBtn = document.getElementById("selectionCta");
+
+    const selected = new Map(); // code → service object
+
+    function updateBar() {
+      if (selected.size === 0) {
+        selectionBar.hidden = true;
+        return;
+      }
+      selectionBar.hidden = false;
+      countBadge.textContent = selected.size;
+
+      if (labelEl) {
+        labelEl.textContent = currentLanguage === "en"
+          ? (selected.size === 1 ? "service selected" : "services selected")
+          : "layanan dipilih";
+      }
+
+      chipsEl.innerHTML = "";
+      selected.forEach((service, code) => {
+        const chip = document.createElement("span");
+        chip.className = "selection-chip";
+        chip.textContent = code;
+        chip.title = currentLanguage === "en" ? service.nameEn : service.nameId;
+        chipsEl.appendChild(chip);
+      });
+    }
+
+    subItems.forEach((item) => {
+      item.classList.add("service-selectable");
+      item.setAttribute("role", "checkbox");
+      item.setAttribute("aria-checked", "false");
+      item.setAttribute("tabindex", "0");
+
+      item.addEventListener("click", () => {
+        const code = item.dataset.serviceCode;
+        const service = typeof KLARIVA_CONFIG !== "undefined" && KLARIVA_CONFIG.services[code];
+        if (!service) return;
+
+        if (selected.has(code)) {
+          selected.delete(code);
+          item.classList.remove("is-selected");
+          item.setAttribute("aria-checked", "false");
+        } else {
+          selected.set(code, service);
+          item.classList.add("is-selected");
+          item.setAttribute("aria-checked", "true");
+        }
+        updateBar();
+      });
+
+      item.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+
+    clearBtn?.addEventListener("click", () => {
+      selected.clear();
+      subItems.forEach((item) => {
+        item.classList.remove("is-selected");
+        item.setAttribute("aria-checked", "false");
+      });
+      updateBar();
+    });
+
+    ctaBtn?.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (selected.size === 0) return;
+      const services = Array.from(selected.entries()).map(([code, service]) => ({ code, ...service }));
+      try {
+        sessionStorage.setItem("klariva-services", JSON.stringify(services));
+        sessionStorage.removeItem("klariva-service");
+      } catch (_) {}
+      window.location.href = "contact.html";
     });
   }
+
+  // ===== CONTACT CHANNELS (contact.html) =====
+  function initContactChannels() {
+    if (!document.querySelector(".channel-shell")) return;
+    if (typeof KLARIVA_CONFIG === "undefined") return;
+
+    const cfg = KLARIVA_CONFIG.contact;
+    let selectedServices = null;
+
+    try {
+      const saved = sessionStorage.getItem("klariva-services");
+      if (saved) selectedServices = JSON.parse(saved);
+      else {
+        const legacy = sessionStorage.getItem("klariva-service");
+        if (legacy) selectedServices = [JSON.parse(legacy)];
+      }
+    } catch (_) {}
+
+    const banner = document.getElementById("selectedServiceBanner");
+    const badgeList = document.getElementById("serviceBadgeList");
+
+    function renderBanner(services) {
+      if (!badgeList) return;
+      badgeList.innerHTML = "";
+      services.forEach((service, index) => {
+        const item = document.createElement("div");
+        item.className = "ssb-service-item";
+        const name = currentLanguage === "en" ? service.nameEn : service.nameId;
+        item.innerHTML = `
+          <span class="ssb-code">${service.code}</span>
+          <span class="ssb-sep">—</span>
+          <span class="ssb-name">${name}</span>
+          <button type="button" class="ssb-item-remove" data-index="${index}" aria-label="Hapus ${service.code}">
+            <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M10 2L2 10M2 2l8 8"/>
+            </svg>
+          </button>`;
+        badgeList.appendChild(item);
+      });
+
+      badgeList.querySelectorAll(".ssb-item-remove").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.dataset.index, 10);
+          selectedServices.splice(idx, 1);
+          if (selectedServices.length === 0) {
+            try {
+              sessionStorage.removeItem("klariva-services");
+              sessionStorage.removeItem("klariva-service");
+            } catch (_) {}
+            selectedServices = null;
+            if (banner) banner.hidden = true;
+            hidePanel();
+          } else {
+            try { sessionStorage.setItem("klariva-services", JSON.stringify(selectedServices)); } catch (_) {}
+            renderBanner(selectedServices);
+            const panel = document.getElementById("messagePanel");
+            const activeCard = document.querySelector(".channel-card.is-active");
+            if (panel && !panel.hidden && activeCard) showPanel(activeCard.dataset.channel);
+          }
+        });
+      });
+    }
+
+    if (banner && selectedServices && selectedServices.length > 0) {
+      renderBanner(selectedServices);
+      banner.hidden = false;
+      setTimeout(() => {
+        document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 400);
+    }
+
+    document.getElementById("serviceBadgeClear")?.addEventListener("click", () => {
+      try {
+        sessionStorage.removeItem("klariva-services");
+        sessionStorage.removeItem("klariva-service");
+      } catch (_) {}
+      selectedServices = null;
+      if (banner) banner.hidden = true;
+      hidePanel();
+    });
+
+    function hidePanel() {
+      const panel = document.getElementById("messagePanel");
+      if (panel) panel.hidden = true;
+      document.querySelectorAll(".channel-card").forEach((c) => c.classList.remove("is-active"));
+    }
+
+    function generateMsg(services, lang) {
+      const isId = lang !== "en";
+      if (!services || services.length === 0) {
+        return isId
+          ? "Halo Klariva, saya ingin berkonsultasi mengenai layanan yang Anda tawarkan."
+          : "Hello Klariva, I would like to consult regarding your services.";
+      }
+      if (services.length === 1) {
+        const s = services[0];
+        const lineLabel = isId ? `Layanan ${s.line}` : `${s.lineEn || s.line} Service`;
+        const name = isId ? s.nameId : s.nameEn;
+        return isId
+          ? `Halo Klariva, saya ingin berkonsultasi mengenai ${lineLabel} — ${s.code}: ${name}.`
+          : `Hello Klariva, I would like to consult regarding ${lineLabel} — ${s.code}: ${name}.`;
+      }
+      const list = services.map((s) => `${s.code}: ${isId ? s.nameId : s.nameEn}`).join(", ");
+      return isId
+        ? `Halo Klariva, saya ingin berkonsultasi mengenai beberapa layanan: ${list}.`
+        : `Hello Klariva, I would like to consult regarding multiple services: ${list}.`;
+    }
+
+    function showPanel(channel) {
+      const panel = document.getElementById("messagePanel");
+      if (!panel) return;
+
+      const isId = currentLanguage !== "en";
+      const msg = generateMsg(selectedServices, currentLanguage);
+
+      document.getElementById("messageText").textContent = msg;
+
+      const channelNames = {
+        whatsapp: "WhatsApp", email: "Email",
+        instagram: "Instagram", threads: "Threads", tiktok: "TikTok", twitter: "X (Twitter)"
+      };
+      document.getElementById("channelNameDisplay").textContent = channelNames[channel] || channel;
+
+      const copyBtn = document.getElementById("copyMessageBtn");
+      if (copyBtn) copyBtn.hidden = channel === "whatsapp";
+
+      let href = "#";
+      let btnText = "";
+
+      if (channel === "whatsapp") {
+        href = `https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(msg)}`;
+        btnText = isId ? "Buka WhatsApp" : "Open WhatsApp";
+      } else if (channel === "email") {
+        const serviceLabel = selectedServices && selectedServices.length > 0
+          ? (selectedServices.length === 1 ? selectedServices[0].code : `${selectedServices.length} ${isId ? "Layanan" : "Services"}`)
+          : "";
+        const subj = isId
+          ? `Konsultasi Klariva${serviceLabel ? " — " + serviceLabel : ""}`
+          : `Klariva Consultation${serviceLabel ? " — " + serviceLabel : ""}`;
+        href = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(cfg.email)}&su=${encodeURIComponent(subj)}&body=${encodeURIComponent(msg)}`;
+        btnText = isId ? "Buka Gmail" : "Open Gmail";
+      } else if (channel === "instagram") {
+        href = `https://www.instagram.com/${cfg.instagram}`;
+        btnText = isId ? "Buka Profil Instagram" : "Open Instagram Profile";
+      } else if (channel === "threads") {
+        href = `https://www.threads.net/@${cfg.threads}`;
+        btnText = isId ? "Buka Threads" : "Open Threads";
+      } else if (channel === "tiktok") {
+        href = `https://www.tiktok.com/@${cfg.tiktok}`;
+        btnText = isId ? "Buka Profil TikTok" : "Open TikTok Profile";
+      } else if (channel === "twitter") {
+        href = `https://x.com/${cfg.twitter}`;
+        btnText = isId ? "Buka Profil X" : "Open X Profile";
+      }
+
+      const actionBtn = document.getElementById("channelActionBtn");
+      const actionText = document.getElementById("channelActionText");
+      if (actionBtn) actionBtn.href = href;
+      if (actionText) actionText.textContent = btnText;
+
+      if (copyBtn) {
+        copyBtn.onclick = () => {
+          const span = copyBtn.querySelector("span");
+          const orig = span.textContent;
+          const success = () => {
+            span.textContent = isId ? "Tersalin!" : "Copied!";
+            setTimeout(() => { span.textContent = orig; }, 2000);
+          };
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(msg).then(success).catch(() => { fallbackCopy(msg); success(); });
+          } else {
+            fallbackCopy(msg); success();
+          }
+        };
+      }
+
+      panel.hidden = false;
+      setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "nearest" }), 50);
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.cssText = "position:fixed;opacity:0;pointer-events:none";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (_) {}
+      document.body.removeChild(ta);
+    }
+
+    document.querySelectorAll(".channel-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".channel-card").forEach((c) => c.classList.remove("is-active"));
+        card.classList.add("is-active");
+        showPanel(card.dataset.channel);
+      });
+    });
+  }
+
+  // ===== FOOTER SOCIAL LINKS =====
+  function initFooterLinks() {
+    if (typeof KLARIVA_CONFIG === "undefined") return;
+    const cfg = KLARIVA_CONFIG.contact;
+    const map = {
+      whatsapp: `https://wa.me/${cfg.whatsapp}`,
+      instagram: `https://www.instagram.com/${cfg.instagram}`,
+      threads: `https://www.threads.net/@${cfg.threads}`,
+      tiktok: `https://www.tiktok.com/@${cfg.tiktok}`,
+      twitter: `https://x.com/${cfg.twitter}`,
+      email: `mailto:${cfg.email}`
+    };
+    document.querySelectorAll("[data-contact-link]").forEach((el) => {
+      const channel = el.dataset.contactLink;
+      if (map[channel]) el.href = map[channel];
+    });
+  }
+
+  initServiceSelection();
+  initContactChannels();
+  initFooterLinks();
 });
