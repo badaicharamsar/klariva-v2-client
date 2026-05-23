@@ -1110,6 +1110,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const ch = el.dataset.contactHandle;
       if (handleMap[ch]) el.textContent = handleMap[ch];
     });
+
+    // Deep link Instagram on mobile — bypass browser redirect
+    if (navigator.maxTouchPoints > 0) {
+      document.querySelectorAll("[data-contact-link='instagram']").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          const appUrl = `instagram://user?username=${cfg.instagram}`;
+          const webUrl = `https://www.instagram.com/${cfg.instagram}`;
+          let appOpened = false;
+          document.addEventListener("visibilitychange", function onHide() {
+            if (document.hidden) {
+              appOpened = true;
+              document.removeEventListener("visibilitychange", onHide);
+            }
+          });
+          setTimeout(() => { if (!appOpened) window.location.href = webUrl; }, 1500);
+          window.location.href = appUrl;
+        });
+      });
+    }
   }
 
   initServiceSelection();
