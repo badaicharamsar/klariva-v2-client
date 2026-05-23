@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ".cta-section .cta-meta": "Konsultasi",
             ".cta-section .cta-sub": "Diskusi awal bersifat rahasia. Tidak ada komitmen sebelum lingkup penugasan disepakati bersama.",
             ".cta-section .btn span": "Ajukan Kasus",
-            ".footer-bottom .code": "KLV-001 / RAHASIA SECARA DESAIN"
+            ".footer-bottom .code": ""
           },
           html: {
             ".hero-meta": "KEJELASAN &middot; KERAHASIAAN &middot; INTEGRITAS",
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
               "Seluruh proses tunduk pada batas legal dan etika kerja"
             ],
             ".dev-note": "KLV-ABOUT / trust built through clarity, confidentiality, and lawful method.",
-            ".footer-bottom .code": "KLV-ABOUT-01 / CLARITY, CONFIDENTIALITY, LAWFUL METHOD"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "Tentang<br><em>Klariva</em>",
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
               "Apa pun jenis kasusnya, kami menjaga empat hal yang sama sejak awal: kerahasiaan klien, kepatuhan pada hukum, objektivitas dalam membaca temuan, dan dokumentasi yang tertib.",
               "Klien tidak dihadapkan pada istilah teknis yang membingungkan. Yang kami jaga adalah kejelasan alur, ruang lingkup yang realistis, komunikasi yang aman, dan hasil yang bisa dipakai untuk penelaahan lebih lanjut."
             ],
-            ".footer-bottom .code": "KLV-PRC-01 / STRUCTURED CLIENT JOURNEY"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "Proses<br><em>Kami</em>",
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ".cta-section .cta-meta": "Intake Rahasia",
             ".cta-section .cta-sub": "Konsultasi awal tidak memerlukan komitmen. Lingkup penugasan baru disepakati setelah penilaian awal selesai.",
             ".cta-section .btn span": "Pilih Kanal",
-            ".footer-bottom .code": "KLV-CNT-01 / KANAL KONSULTASI AKTIF"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "Hubungi<br><em>Klariva</em>",
@@ -410,7 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ".cta-section .cta-meta": "Engage",
             ".cta-section .cta-sub": "Initial discussion remains confidential. No commitment is required before the assignment scope is mutually agreed.",
             ".cta-section .btn span": "Start Case",
-            ".footer-bottom .code": "KLV-001 / CONFIDENTIAL BY DESIGN"
+            ".footer-bottom .code": ""
           },
           html: {
             ".hero-meta": "CLARITY &middot; CONFIDENTIALITY &middot; INTEGRITY",
@@ -536,7 +536,7 @@ document.addEventListener("DOMContentLoaded", () => {
               "The whole process stays within lawful and ethical boundaries"
             ],
             ".dev-note": "KLV-ABOUT / trust built through clarity, confidentiality, and lawful method.",
-            ".footer-bottom .code": "KLV-ABOUT-01 / CLARITY, CONFIDENTIALITY, LAWFUL METHOD"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "About<br><em>Klariva</em>",
@@ -575,7 +575,7 @@ document.addEventListener("DOMContentLoaded", () => {
               "Whatever the case type, four things stay constant from the start: client confidentiality, legal compliance, objectivity in reading findings, and orderly documentation.",
               "Clients are not forced through confusing technical language. What we protect is clarity of flow, realistic scope, secure communication, and outputs that can actually be used for further review."
             ],
-            ".footer-bottom .code": "KLV-PRC-01 / STRUCTURED CLIENT JOURNEY"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "Our<br><em>Process</em>",
@@ -618,7 +618,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ".cta-section .cta-meta": "Confidential Intake",
             ".cta-section .cta-sub": "The initial consultation requires no commitment. The assignment scope is only agreed upon after the initial assessment.",
             ".cta-section .btn span": "Choose Channel",
-            ".footer-bottom .code": "KLV-CNT-01 / CONSULTATION CHANNELS ACTIVE"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "Contact<br><em>Klariva</em>",
