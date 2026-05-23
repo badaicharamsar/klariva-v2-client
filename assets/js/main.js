@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ".cta-section .cta-meta": "Konsultasi",
             ".cta-section .cta-sub": "Diskusi awal bersifat rahasia. Tidak ada komitmen sebelum lingkup penugasan disepakati bersama.",
             ".cta-section .btn span": "Ajukan Konsultasi",
-            ".footer-bottom .code": "KLV-SRV-003 / LEGAL SECARA DESAIN"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "Layanan<br><em>Klariva</em>",
@@ -483,7 +483,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ".cta-section .cta-meta": "Engage",
             ".cta-section .cta-sub": "Initial discussion remains confidential. No commitment is required before the assignment scope is mutually agreed.",
             ".cta-section .btn span": "Request Consultation",
-            ".footer-bottom .code": "KLV-SRV-003 / LAWFUL BY DESIGN"
+            ".footer-bottom .code": ""
           },
           html: {
             ".page-hero-title": "Services<br><em>Klariva</em>",
