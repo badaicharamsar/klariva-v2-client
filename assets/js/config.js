@@ -1,10 +1,10 @@
 const KLARIVA_CONFIG = {
   contact: {
-    whatsapp: "628127688109",
-    instagram: "nusantarabadai",
-    tiktok: "badainusantara9",
-    email: "badaicharamsar@gmail.com",
-    threads: "nusantarabadai",
+    whatsapp: "6282322210007",
+    instagram: "klarivainvestigation",
+    tiktok: "klarivainvestigation",
+    email: "klarivainvestigation@gmail.com",
+    threads: "klarivainvestigation",
     twitter: "klarivaIV"
   },
   services: {
