@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
           ".footer .footer-col:nth-child(4) h4": "Kontak",
           ".footer .footer-col:nth-child(4) p": [
             "Konsultasi awal hanya melalui janji terlebih dahulu.",
-            "Kanal komunikasi aman tersedia berdasarkan permintaan.",
-            "Operasional berbasis di Indonesia."
+            "Kanal komunikasi aman tersedia berdasarkan permintaan."
           ],
+          ".footer-contact-name": ["WhatsApp", "Instagram", "Threads", "TikTok", "X (Twitter)", "Email"],
           ".footer-bottom p:first-child": "\u00a9 2026 Klariva. Seluruh hak cipta dilindungi."
         }
       },
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           text: {
             ".page-hero .eyebrow": "Direktori Layanan / KLV-SRV-03",
-            ".services-pillars .pillar-value": ["03", "15", "100%", "ID"],
+            ".services-pillars .pillar-value": ["03", "17", "100%", "ID"],
             ".services-pillars .pillar-label": ["Lini Layanan", "Domain Operasional", "Keterlibatan Rahasia", "Operasi Indonesia"],
             ".service-visual-label": ["01 · Personal", "02 · Korporat", "03 · Digital"],
             ".service-meta span:first-child": "Lini Layanan",
@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
             ".service-foot": ["Rahasia · Diskret", "Rahasia · Patuh Kepatuhan", "OSINT · Domain Publik Saja"],
             ".sub-label": "Lingkup Layanan",
+            ".sub-hint": "Pilih layanan yang relevan untuk dilanjutkan",
             ".sub-list .sub-text": [
               "Investigasi relasi dan indikasi perselingkuhan",
               "Verifikasi pasangan atau calon pasangan",
@@ -337,9 +338,9 @@ document.addEventListener("DOMContentLoaded", () => {
           ".footer .footer-col:nth-child(4) h4": "Contact",
           ".footer .footer-col:nth-child(4) p": [
             "Initial consultation by appointment only.",
-            "Secure communication available on request.",
-            "Indonesia based operations."
+            "Secure communication available on request."
           ],
+          ".footer-contact-name": ["WhatsApp", "Instagram", "Threads", "TikTok", "X (Twitter)", "Email"],
           ".footer-bottom p:first-child": "\u00a9 2026 Klariva. All rights reserved."
         }
       },
@@ -438,7 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           text: {
             ".page-hero .eyebrow": "Services Directory / KLV-SRV-03",
-            ".services-pillars .pillar-value": ["03", "15", "100%", "ID"],
+            ".services-pillars .pillar-value": ["03", "17", "100%", "ID"],
             ".services-pillars .pillar-label": ["Service Lines", "Operational Domains", "Confidential Engagement", "Indonesia Operations"],
             ".service-visual-label": ["01 · Personal", "02 · Corporate", "03 · Digital"],
             ".service-meta span:first-child": "Service Line",
@@ -450,6 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
             ".service-foot": ["Confidential · Discreet", "Confidential · Compliance-Aware", "OSINT · Public Domain Only"],
             ".sub-label": "Service Scope",
+            ".sub-hint": "Select relevant services to proceed",
             ".sub-list .sub-text": [
               "Relationship investigation and indication of infidelity",
               "Verification of a partner or prospective partner",
@@ -1013,8 +1015,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const subj = isId
           ? `Konsultasi Klariva${serviceLabel ? " — " + serviceLabel : ""}`
           : `Klariva Consultation${serviceLabel ? " — " + serviceLabel : ""}`;
-        href = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(cfg.email)}&su=${encodeURIComponent(subj)}&body=${encodeURIComponent(msg)}`;
-        btnText = isId ? "Buka Gmail" : "Open Gmail";
+        const isMobile = navigator.maxTouchPoints > 0;
+        if (isMobile) {
+          href = `mailto:${cfg.email}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(msg)}`;
+          btnText = isId ? "Buka Aplikasi Email" : "Open Email App";
+        } else {
+          href = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(cfg.email)}&su=${encodeURIComponent(subj)}&body=${encodeURIComponent(msg)}`;
+          btnText = isId ? "Buka Gmail" : "Open Gmail";
+        }
       } else if (channel === "instagram") {
         href = `https://www.instagram.com/${cfg.instagram}`;
         btnText = isId ? "Buka Profil Instagram" : "Open Instagram Profile";
@@ -1077,7 +1085,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function initFooterLinks() {
     if (typeof KLARIVA_CONFIG === "undefined") return;
     const cfg = KLARIVA_CONFIG.contact;
-    const map = {
+    const hrefMap = {
       whatsapp: `https://wa.me/${cfg.whatsapp}`,
       instagram: `https://www.instagram.com/${cfg.instagram}`,
       threads: `https://www.threads.net/@${cfg.threads}`,
@@ -1085,9 +1093,22 @@ document.addEventListener("DOMContentLoaded", () => {
       twitter: `https://x.com/${cfg.twitter}`,
       email: `mailto:${cfg.email}`
     };
+    const wa = cfg.whatsapp.slice(2);
+    const handleMap = {
+      whatsapp: `+62 ${wa.slice(0,3)}-${wa.slice(3,7)}-${wa.slice(7)}`,
+      instagram: `@${cfg.instagram}`,
+      threads: `@${cfg.threads}`,
+      tiktok: `@${cfg.tiktok}`,
+      twitter: `@${cfg.twitter}`,
+      email: cfg.email
+    };
     document.querySelectorAll("[data-contact-link]").forEach((el) => {
-      const channel = el.dataset.contactLink;
-      if (map[channel]) el.href = map[channel];
+      const ch = el.dataset.contactLink;
+      if (hrefMap[ch]) el.href = hrefMap[ch];
+    });
+    document.querySelectorAll("[data-contact-handle]").forEach((el) => {
+      const ch = el.dataset.contactHandle;
+      if (handleMap[ch]) el.textContent = handleMap[ch];
     });
   }
 
